@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h1>{{ blog.title }}</h1>
+        <p>{{ blog.pub_date }}</p>
+        <p>{{ blog.body }}</p>
+      </div>
+
+      <div class="box">
+        <a class="btn btn-default" href="{% url 'update' blog.id %}" role="button">수정하기</a>
+        <a class="btn btn-danger" href="{% url 'delete' blog.id %}" role="button">삭제</a>
+      </div>
+    </div>
+
+  </div>
+  <br>
+
+{% endblock %}
